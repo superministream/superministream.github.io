@@ -28,26 +28,80 @@
                     <div class="col-6 text-right">
                         <nav class="nav nav-masthead justify-content-center">
                             <a class="nav-link active" href="/">Home</a>
-                            <a class="nav-link" href="/privacy.html">Privacy</a>
+                            <a class="nav-link" href="/privacy.html">Privacy Policy</a>
                             <a id="contact-link" class="nav-link" href="">Contact</a>
                         </nav>
                     </div>
                 </div>
             </header>
 
-            <main role="main" class="inner cover">
-                <h1 class="cover-heading">Easily Schedule and Manage Multiple YouTube Live Broadcasts</h1>
-                <p class="lead">
-                SuperMiniStream takes your conference schedule and creates YouTube live broadcasts,
-                Zoom Meetings, and Discord channels for each session. During your conference,
-                SuperMiniStream can be used to easily migrate one or more YouTube streams
-                between the different broadcasts in your schedule, making the corresponding broadcasts
-                live to viewers. SuperMiniStream makes it
-                easy to run virtual conferences with multiple parallel tracks.
-                </p>
-            </main>
+            <div class="container content row mt-4">
+                <div class="col-12">
+                    <h1 class="cover-heading">Easily Schedule and Manage Multiple YouTube Live Broadcasts</h1>
+                    <p class="lead">
+                    SuperMiniStream takes your conference schedule and creates YouTube live broadcasts,
+                    Zoom Meetings, and Discord channels for each session. During your conference,
+                    SuperMiniStream can be used to easily migrate one or more YouTube streams
+                    between the different broadcasts in your schedule, making the corresponding broadcasts
+                    live to viewers. SuperMiniStream makes it
+                    easy to run virtual conferences with multiple parallel tracks.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <h3>Why SuperMiniStream</h3>
+                    <p class="text-left">
+                    When running a virtual conference, especially one with multiple parallel tracks, it is
+                    time consuming to manually create the associated Youtube broadcasts for each session
+                    in the conference. During the conference, it can also be difficult to quickly transition
+                    the YouTube live streams between the different broadcasts, if recording each session
+                    as a separate archived stream.
+                    SuperMiniStream makes this process easy. SuperMiniStream takes your conference's
+                    schedule, broken down by event, session, and time slot, and schedules the YouTube
+                    broadcasts for you. During the conference, SuperMiniStream uses the same schedule
+                    information to advance the live streams for each session through the different
+                    YouTube broadcasts.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <h4>Setting up the Conference YouTube Broadcasts</h4>
+                    <p class="text-left">
+                    SuperMiniStream just needs some simple information about your conference schedule
+                    to create the YouTube broadcasts for you. In an Excel Workbook, you provide a
+                    sheet for each day that contains the time breakdown of each event. Events are
+                    broken into sessions, where each session maps to a unique YouTube broadcast (video).
+                    You can provide additional detail about the time slots within a session, this
+                    information will be used to populate the video description. The schedule_day.py
+                    script takes this schedule and creates the corresponding broadcasts, as shown below.
+                    The scheduling script can also take care of creating Zoom meetings and Discord
+                    chat channels for your sessions. See the <u><a href="https://docs.google.com/spreadsheets/d/1Q9GpKWnCVD15Msz65zzZPWEpk2yd5pTKgsIkiLX8Luw/edit?usp=sharing">example session sheet</a></u> for an example of how your schedule should be formatted.
+                    </p>
+                    <a href="/assets/schedule_day.png"><img class="img-fluid" src="/assets/schedule_day.png"/></a>
+                </div>
+                <div class="col-12 mt-4">
+                    <h4>Managing Multiple LiveStreams During the Conference</h4>
+                    <p class="text-left">
+                    SuperMiniStream also makes it easy to manage multiple parallel live streams during
+                    the conference. Once the sessions have completed, the advance_streams.py script
+                    can be used to transition the streams from the current broadcasts to those for
+                    the next session. No need to manage multiple stream keys per-computer, or swap
+                    things around in YouTube Studio. SuperMiniStream uses the session time to tell
+                    when a stream should be migrated to the next broadcast, allowing it to handle
+                    variable length sessions in your schedule.
+                    <p>
+                    <a href="/assets/advance_streams.png"><img class="img-fluid" src="/assets/advance_streams.png"/></a>
+                </div>
+                <div class="col-12 mt-4">
+                    <h3>Your Data</h3>
+                    <p class="text-left">
+                    SuperMiniStream does not collect or store your user data. SuperMiniStream will only use
+                    your YouTube account to schedule broadcasts for your conference sessions and manage
+                    binding live streams from your streaming software to those broadcasts to make them live.
+                    Please see the <u><a href="/privacy.html">privacy policy</a></u> for more information.
+                    </p>
+                </div>
+            </div>
 
-            <footer class="mastfoot mt-auto">
+            <footer class="mastfoot mt-4">
                 <div class="inner">
                     <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.
                     Application icon by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from 
